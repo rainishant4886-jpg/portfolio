@@ -3,273 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nishant's Portfolio</title>
+    <title>Nishant Portfolio</title>
+
     <style>
+        /* ---------- RESET ---------- */
         *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
+
         body{
-            background-color: rgb(6, 6, 25);
-            color: white;
+            background: #0A0A23;
+            color: #ffffff;
         }
+
+        /* ---------- NAVBAR ---------- */
         nav{
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            height: 80px;
-            background-color: rgb(2, 2, 45);
+            padding: 18px 70px;
+            background: #0F0F35;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
+
+        nav .logo{
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
         nav ul{
             display: flex;
-            justify-content: center;
+            gap: 35px;
         }
+
         nav ul li{
             list-style: none;
-            margin: 0 23px;
         }
-        .left{
-            font-size: 1.5rem;
+
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.05rem;
+            transition: 0.3s;
         }
+
+        nav ul li a:hover{
+            color: #00d9ff;
+        }
+
+        /* ---------- HERO SECTION ---------- */
         .firstSection{
             display: flex;
-            justify-content: space-around;
-            margin: 23px 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 70px;
+            gap: 40px;
         }
-        .firstSection >div{
-            width: 30%;
-        }
-        .leftSection{
-            width: 90%;
-            margin: 50px 0;
-            font-size: 3rem;
-        }
-        .rightSection img{
-            width: 100%;
-            margin: 50px 0;
-            
-        }
-        .purple{
-            color: rgb(72, 100, 109);
-        }
-        .right ul li a{
-            text-decoration: none;
-            color: white;
-        }
-        .right ul li a:hover{
-            color: rgb(159, 141, 100);
-            font-size: 1.02rem;
-        }
-        #element{
-            color: rgb(72, 100, 109);
-        }
-        .secondsection{
-            max-width: 80vw;
-            margin: auto;
-            height: 80vh;
-        }
-        main hr{
-            border: 0;
-            background: rgb(128, 114, 114);
-            height: 1px;
-            margin: 40px 90px;
-        }
-        .secondsection .box{
-            background: white;
-            width: 80vw;
-            height: 2px;
-            margin: 56px 0;
-            display: flex;
-        }
-        .text-grey{
-            color: gray;
-        }
-        .secondsection .vertical-line{
-            
-            height: 100px;
-            width: 1px;
-            background-color: white;
-            margin: 0 100px;
-        }
-        .image-top{
-            width: 23px;
-            position: relative;
-            top: -25px;
-            left: -9px;
-        }
-        .vertical-title{
-            position: relative;
-            top: 75px;
-            width: 150px;
-        }
-        .vertical-desc{
-            position: relative;
-            top: 90px;
-            width: 150px;
-            font-size: 9px;
-            color: gray;
-        }
-        footer{
-            background-color: rgb(31, 36, 56);
-            
-        }
-        .footer{
-            display: flex;
-            margin: 23px 110px;
-            justify-content: space-evenly;
-        }
-        .footer ul{
-            list-style: none;
-        }
-        .footer >div{
-            width: 223px;
-        }
-        footer .footer-rights{
-            text-align: center;
-            color: aqua;
-            padding: 12px 0;
 
+        .leftSection{
+            flex: 1;
+            font-size: 3rem;
+            line-height: 60px;
         }
+
+        .leftSection .purple{
+            color: #00d9ff;
+            font-weight: 600;
+        }
+
         .leftSection .btn{
-            padding: 12px;
-            background-color: #1e2167;
-            color: white;
-            border: 2px solid white;
-            border-radius: 6px;
-            font-size: 20px;
-          cursor: pointer;  
+            margin-top: 25px;
+            padding: 12px 22px;
+            background: transparent;
+            border: 2px solid #00d9ff;
+            border-radius: 8px;
+            font-size: 18px;
+            color: #00d9ff;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: 0.3s;
         }
+
+        .leftSection .btn:hover{
+            background: #00d9ff;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
         .leftSection .btn a{
             text-decoration: none;
-            color: white;
+            color: inherit;
         }
 
+        .rightSection img{
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(0, 217, 255, 0.4);
+        }
+
+        /* ---------- SKILL SECTION ---------- */
+        .secondsection{
+            text-align: center;
+            padding: 80px 0;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .secondsection h1{
+            font-size: 2.5rem;
+            margin-top: 10px;
+        }
+
+        .skills-grid{
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 35px;
+            padding: 0 40px;
+        }
+
+        .skill-card{
+            background: #111133;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #1f1f4d;
+        }
+
+        .skill-card:hover{
+            transform: translateY(-8px);
+            border-color: #00d9ff;
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+        }
+
+        .skill-card img{
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card h3{
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        .skill-card p{
+            font-size: 0.85rem;
+            color: #c7c7c7;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer{
+            margin-top: 70px;
+            background: #09091C;
+            padding: 40px 0;
+            text-align: center;
+            color: #bbb;
+        }
+
+        footer h2{
+            color: #fff;
+        }
+
+        footer p{
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 900px){
+            .firstSection{
+                flex-direction: column;
+                text-align: center;
+            }
+            .rightSection img{
+                width: 90%;
+            }
+            .leftSection{
+                font-size: 2.3rem;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="left">Nishant's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">ContactMe</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hi,i am <span class="purple">Nishant</span>
-                <div>and I am a passionate</div>
-                <div class="buttons">
-                    <button class="btn">Download Resume</button>
-                    <button class="btn"><a href="https://github.com/">Visit Github</a></button>
-                    <button class="btn"><a href="https://leetcode.com/u/1YbUoCMiSn/">LeetCode profile</a></button>
-                    <button class="btn"><a href="https://www.geeksforgeeks.org/user/login/">Gfg profile</a></button>
-                    <button class="btn"><a href="https://www.hackerrank.com/submissions/all">Hackerrank profile</a></button>
-                </div>
-                <span id="element"></span>
-            </div>
-            <div class="rightSection">
-                <img src="resource/rear-view-programmer-working-all-night-long.jpg" alt="">
-            </div>
-        </section>
-        <hr>
-        <section class="secondsection">
-            <span class="text-grey">What i have done So far</span>
-            <h1>Skills</h1>
-            <div class="box">
-                <div class="vertical-line">
-                    <img class="image-top" src="resource/js.png" alt="">
-                    <div class="vertical-title">HTML </div>
-                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-                         magnam? Consequatur hic quo suscipit harum minima quae debitis? Dolorum temporibus nemo aliquam assumenda?
-                    </div>
-                </div>
-                <div class="vertical-line">
-                    <img class="image-top" src="resource/css.png" alt="">
-                    <div class="vertical-title">CSS </div>
-                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-                         magnam? Consequatur hic quo suscipit harum minima quae debitis? Dolorum temporibus nemo aliquam assumenda?
-                    </div> 
 
-                </div>
-                <div class="vertical-line">
-                    <img class="image-top" src="resource/js.png" alt="">
-                    <div class="vertical-title">JavaScript</div>
-                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-                         magnam? Consequatur hic quo suscipit harum minima quae debitis? Dolorum temporibus nemo aliquam assumenda?
-                    </div>
-                </div>
-                <div class="vertical-line">
-                    <img class="image-top" src="resource/java.png" alt="">
-                    <div class="vertical-title">Java</div>
-                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-                         magnam? Consequatur hic quo suscipit harum minima quae debitis? Dolorum temporibus nemo aliquam assumenda?
-                    </div>
-                </div>
-                <div class="vertical-line">
-                    <img class="image-top" src="resource/C++.svg" alt="">
-                    <div class="vertical-title">C++ </div>
-                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-                         magnam? Consequatur hic quo suscipit harum minima quae debitis? Dolorum temporibus nemo aliquam assumenda?
-                    </div>
-                </div>
-                <div class="vertical-line">
-                    <img class="image-top" src="resource/unnamed.png" alt="">
-                    <div class="vertical-title">Data Structure & Algo</div>
-                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-                         magnam? Consequatur hic quo suscipit harum minima quae debitis? Dolorum temporibus nemo aliquam assumenda?
-                    </div>
-                </div>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Nishant's Portfolio</div>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
 
+    <!-- HERO SECTION -->
+    <section class="firstSection">
+        <div class="leftSection">
+            Hi, I am <span class="purple">Nishant</span>
+            <div>and I am a passionate</div>
 
+            <span id="element"></span>
+
+            <div class="buttons">
+                <button class="btn">Download Resume</button>
+                <button class="btn"><a href="https://github.com/">Github</a></button>
+                <button class="btn"><a href="https://leetcode.com">LeetCode</a></button>
+                <button class="btn"><a href="https://www.geeksforgeeks.org/">GFG</a></button>
             </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="footer-first">
-                <h1>Nishant's Portfolio</h1>
-            </div>
-            <div class="footer-second">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>ContactMe</li>
-                    
-                </ul>
-            </div>
-            <div class="footer-third">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>ContactMe</li>
-                    
-                </ul>
-            </div>
-            <div class="footer-fourth">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>ContactMe</li>
-                    
-                </ul>
-            </div>
-            
         </div>
-        <div class="footer-rights">
-                copyright &#169;www.nishant.com || All rights reserved
+
+        <div class="rightSection">
+            <img src="resource/rear-view-programmer-working-all-night-long.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="secondsection">
+        <span style="color: gray;">What I have done so far</span>
+        <h1>Skills</h1>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="resource/html.png">
+                <h3>HTML</h3>
+                <p>Structured web pages using semantic & modern HTML.</p>
             </div>
+
+            <div class="skill-card">
+                <img src="resource/css.png">
+                <h3>CSS</h3>
+                <p>Beautiful UI with animations, layouts & modern design.</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="resource/js.png">
+                <h3>JavaScript</h3>
+                <p>Interactive, dynamic, real-time functionality.</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="resource/java.png">
+                <h3>Java</h3>
+                <p>OOP concepts, backend application building.</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="resource/C++.svg">
+                <h3>C++</h3>
+                <p>Competitive coding & high-performance logic.</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="resource/unnamed.png">
+                <h3>Data Structures & Algorithms</h3>
+                <p>Optimized problem-solving across platforms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>Nishant's Portfolio</h2>
+        <p>© 2025 | All Rights Reserved</p>
     </footer>
+
+    <!-- ANIMATION JS -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
@@ -277,5 +284,6 @@
             typeSpeed: 50,
         });
     </script>
+
 </body>
 </html>
